@@ -1,27 +1,29 @@
-Welcome to Glitch
-=================
+<p align="center"><img src="https://i.postimg.cc/6p1LGw3M/xirbrand.png"></p>
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+<p align="center"><h1>XiR Bot Project</h1></p>
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+<p align="center">
+  <a href="https://discord.gg/GkzwCgM">
+<img alt="Discord" src="https://img.shields.io/discord/509839189714665492.svg?label=XiR%20BoT%20Destek%20Sunucusu&logo=discord&logoColor=white&style=flat-square">
+  </a>
+</p>
 
-Find out more [about Glitch](https://glitch.com/about).
+<p align="center"><a href="https://discordbots.org/bot/509835376857186315" target="_blank"><img src="https://discordbots.org/api/widget/owner/509835376857186315.svg?rightcolor=D49818&righttextcolor=1a1d23"></a></p>
+<p align="center"><img src="https://discordbots.org/api/widget/509835376857186315.svg?usernamecolor=D49818&topcolor=000000&middlecolor=1a1d23&datacolor=D49818"></p>
 
+Discord Glitch Bot 7/24 Aktif - Bot Dosyaları
+<br>
+Discord Botumuz: https://bitly.com/xirdavet
+<br>
+Discord Sunucumuz: https://bitly.com/xirdcsunucu
+<br>
+Bot Website: https://xir.glitch.me
 
-Your Project
-------------
+Tüm Komutlara Ulaşmak için discord sunucumuza gelin https://bit.ly/xirdcsunucu Sizde 7/24 çalışan bot yapmak isterseniz hemen videomuzu izleyin
+https://www.youtube.com/watch?v=LosLPMZiDqc
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+Otorol Komutu Videomuz:
+https://www.youtube.com/watch?v=aQQzgRlZ69c
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+Detaylı Bilgi vb: MeliL#7408
 
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
