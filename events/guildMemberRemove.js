@@ -1,5 +1,4 @@
 module.exports = member => {
   let guild = member.guild;
-  member.send('Sunucudan Ayrıldı!');
-  guild.defaultChannel.send(``);
+  guild.defaultChannel.sendMessage(`${member.user.username} aramızdan ayrıldı :frowning:`);
 };
