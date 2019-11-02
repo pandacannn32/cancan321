@@ -9,7 +9,7 @@ module.exports = client => {
 }, 8000);
 client.user.setPresence({
         game: {
-            name: `${prefix}yardım - ${prefix}davet | ${client.guilds.size} sunucuyu`,
+            name: `${prefix}js Online`,
             type: 'WATCHING'
         },
         status: 'idle'
