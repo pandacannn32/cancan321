@@ -12,7 +12,7 @@ client.user.setPresence({
             name: `${prefix}js Online`,
             type: 'WATCHING'
         },
-        status: 'idle'
+        status: 'online'
     })
     console.log(`[BOT]: Giriş Yaptı! Komutlar Yüklendi!`);
 }
