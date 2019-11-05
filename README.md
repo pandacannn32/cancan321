@@ -1,6 +1,3 @@
-Cod Share #3K <3
-====
+# Server Destek <3
 
-● Bu alt yapı **Cod Share** sunucusuna aittir.
-
-● İzinsiz paylaşılamaz.
+● Bu Bot Alt Yapısı **Server Destek** Botuna Aittir!
