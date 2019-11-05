@@ -137,7 +137,7 @@ client.on("guildMemberAdd", member => {
     let sayaçkanal = client.channels.get(sayaçkanalID);
     let aralık = parseInt(sayaçsayı) - parseInt(member.guild.members.size);
     sayaçkanal.sendMessage(
-      "🔸 **" +
+      "🔹 **" +
         member +
         "** Sunucuya Katıldı \n🔹 **" +
         sayaçsayı +
@@ -145,7 +145,7 @@ client.on("guildMemberAdd", member => {
         aralık +
         "** Kişi Kaldı! \n🔹 **" +
         member.guild.members.size +
-        "** Kişiyiz!**"
+        "** Kişiyiz!"
     );
   }
 });
