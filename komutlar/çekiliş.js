@@ -59,9 +59,8 @@ var filter = m => m.author.id === message.author.id;
                 try {
                   let giveEmbed = new Discord.RichEmbed()
                   .setColor("#f558c9")
-                  .setDescription(`**${title}** \n🎉'a Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
-                  .setFooter(message.author.username + " (high security çekiliş sistemi)", message.author.avatarURL);
-                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **ÇEKİLİŞ BAŞLADI** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
+                  .setTitle("🎁 ÇEKİLİŞ BAŞLADI 🎁")
+                  .setDescription(`**${title}** \n🎉 Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
                      let re = m.react('🎉');
                      setTimeout(() => {
                        let users = m.reactions.get("🎉").users
@@ -71,7 +70,6 @@ var filter = m => m.author.id === message.author.id;
                        .setAuthor(message.author.username, message.author.avatarURL)
                        .setTitle(title)
                        .setColor("#f558c9")
-			.setFooter("(DTBS bot çekiliş sistemi)")
                        .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter}`)
                        .setTimestamp()
                      m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
