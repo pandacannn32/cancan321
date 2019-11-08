@@ -56,7 +56,7 @@ var filter = m => m.author.id === message.author.id;
                 collected.first().delete();
                 msg.delete();
                 message.delete();
-                try {
+      
                   let giveEmbed = new Discord.RichEmbed()
                   .setColor("#f558c9")
                   .setTitle("🎁 ÇEKİLİŞ BAŞLADI 🎁")
@@ -81,19 +81,19 @@ var filter = m => m.author.id === message.author.id;
                     message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` Kazandın!**` , embedLel)
                 }, ms(duration));
             });
-                } catch(e) {
+                
                 message.channel.send(`:heavy_multiplication_x:| **Maalesef Gerekli Yetkilerim Bulunmamakta**`);
-                  console.log(e);
+                
                 }
-              });
+              );
             });
           });
         });
       });
-    });
+    };
   
   
-};
+
 
 exports.conf = {
   enabled: true,
