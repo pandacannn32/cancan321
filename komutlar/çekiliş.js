@@ -61,8 +61,7 @@ var filter = m => m.author.id === message.author.id;
                   .setColor("#f558c9")
                   .setTitle("🎁 ÇEKİLİŞ BAŞLADI 🎁")
                   .setDescription(`**${title}** \n🎉 Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
-                  .setFooter(message.author.username + " (high security çeki
-                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **ÇEKİLİŞ BAŞLADI** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
+                  message.guild.channels.find("name" , room).send('' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
                        let users = m.reactions.get("🎉").users
@@ -72,19 +71,18 @@ var filter = m => m.author.id === message.author.id;
                        .setAuthor(message.author.username, message.author.avatarURL)
                        .setTitle(title)
                        .setColor("#f558c9")
-			.setFooter("(DTBS bot çekiliş sistemi)")
-                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter} \nBitiş zamanı :`)
+                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter}`)
                        .setTimestamp()
                      m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
                        
                        var embedLel = new Discord.RichEmbed()
                         .setColor("#f558c9")
-                        .setDescription("Ödülünü destek talebi açarak elde edebilirsin!").setFooter("(Owner Kod Paylaşım)")
-                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` kazandın!**` , embedLel)
+                        .setDescription("Ödülünü Kısa Süre Sonra Alacaksın!").setFooter("(Owner / Kod Paylaşım)")
+                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` Kazandın!**` , embedLel)
                 }, ms(duration));
             });
                 } catch(e) {
-                message.channel.send(`:heavy_multiplication_x:| **Maalesef gerekli yetkilerim bulunmamakta**`);
+                message.channel.send(`:heavy_multiplication_x:| **Maalesef Gerekli Yetkilerim Bulunmamakta**`);
                   console.log(e);
                 }
               });
