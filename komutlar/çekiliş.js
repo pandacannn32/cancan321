@@ -34,19 +34,19 @@ var filter = m => m.author.id === message.author.id;
         errors: ['time']
       }).then(collected => {
         let room = message.guild.channels.find('name' , collected.first().content);
-        if(!room) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Kanal Bulamadım!**');
+        if(!room) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Kanal Bulamadım**');
         room = collected.first().content;
         collected.first().delete();
-        msg.edit(':eight_pointed_black_star:| **Çekilişin Süresini Belirle (1s, 1m, 1h, 1d, 1w)**').then(msg => {
+        msg.edit(':eight_pointed_black_star:| **Çekilişin Süresini Belirle (1s, 1m, 1h, 1d, )**').then(msg => {
           message.channel.awaitMessages(filter, {
             max: 1,
             time: 20000,
             errors: ['time']
           }).then(collected => {
-            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Sre Bilmiyorum :(**');
+            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Süre Bilmiyorum!**');
             duration = collected.first().content
             collected.first().delete();
-            msg.edit(':eight_pointed_black_star:| **Şimdi De Ödülü Yaz Bakalım**').then(msg => {
+            msg.edit(':eight_pointed_black_star:| **Şimdi de Ödülü Yaz Bakalım**').then(msg => {
               message.channel.awaitMessages(filter, {
                 max: 1,
                 time: 20000,
@@ -56,11 +56,13 @@ var filter = m => m.author.id === message.author.id;
                 collected.first().delete();
                 msg.delete();
                 message.delete();
-      
+                try {
                   let giveEmbed = new Discord.RichEmbed()
                   .setColor("#f558c9")
                   .setTitle("🎁 ÇEKİLİŞ BAŞLADI 🎁")
                   .setDescription(`**${title}** \n🎉 Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
+                  .setFooter(message.author.username + " (high security çeki
+                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **ÇEKİLİŞ BAŞLADI** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
                        let users = m.reactions.get("🎉").users
@@ -70,30 +72,30 @@ var filter = m => m.author.id === message.author.id;
                        .setAuthor(message.author.username, message.author.avatarURL)
                        .setTitle(title)
                        .setColor("#f558c9")
-                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter}`)
+			.setFooter("(DTBS bot çekiliş sistemi)")
+                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter} \nBitiş zamanı :`)
                        .setTimestamp()
                      m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
                        
                        var embedLel = new Discord.RichEmbed()
                         .setColor("#f558c9")
-                        .setDescription("Öďülün Kısa Süre Sonra Verilecektir!")
-                       .setFooter("Owner Kod Paylaşım")
-                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` Kazandın!**` , embedLel)
+                        .setDescription("Ödülünü destek talebi açarak elde edebilirsin!").setFooter("(Owner Kod Paylaşım)")
+                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` kazandın!**` , embedLel)
                 }, ms(duration));
             });
-                
-                message.channel.send(`:heavy_multiplication_x:| **Maalesef Gerekli Yetkilerim Bulunmamakta**`);
-                
+                } catch(e) {
+                message.channel.send(`:heavy_multiplication_x:| **Maalesef gerekli yetkilerim bulunmamakta**`);
+                  console.log(e);
                 }
-              );
+              });
             });
           });
         });
       });
-    };
+    });
   
   
-
+};
 
 exports.conf = {
   enabled: true,
