@@ -27,26 +27,26 @@ var filter = m => m.author.id === message.author.id;
  
   
   
-      message.channel.send(`:eight_pointed_black_star:| **Çekilişin Yapılacağı Kanalın Adını Yaz**`).then(msg => {
+      message.channel.send(`🔱 | **Çekilişin Yapılacağı Kanalın Adını Yaz**`).then(msg => {
       message.channel.awaitMessages(filter, {
         max: 1,
         time: 20000,
         errors: ['time']
       }).then(collected => {
         let room = message.guild.channels.find('name' , collected.first().content);
-        if(!room) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Kanal Bulamadım**');
+        if(!room) return message.channel.send('❌ | **Geçersiz Kanal İsmi! \`UYARI: Lütfen Kanalı Etiketlemeyin Baştaki "#" İşaretini Siliniz!\` **');
         room = collected.first().content;
         collected.first().delete();
-        msg.edit(':eight_pointed_black_star:| **Çekilişin Süresini Belirle (1s, 1m, 1h, 1d, )**').then(msg => {
+        msg.edit('⏰ | **Çekiliş Süresini Belirle! (1s, 1m, 1h, 1d)**').then(msg => {
           message.channel.awaitMessages(filter, {
             max: 1,
             time: 20000,
             errors: ['time']
           }).then(collected => {
-            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Süre Bilmiyorum!**');
+            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('❌ | **Geçersiz Süre!**');
             duration = collected.first().content
             collected.first().delete();
-            msg.edit(':eight_pointed_black_star:| **Şimdi de Ödülü Yaz Bakalım**').then(msg => {
+            msg.edit('🎁 | **Lütfen Vereceğin Hediyeyi Yaz!**').then(msg => {
               message.channel.awaitMessages(filter, {
                 max: 1,
                 time: 20000,
