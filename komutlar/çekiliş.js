@@ -34,19 +34,19 @@ var filter = m => m.author.id === message.author.id;
         errors: ['time']
       }).then(collected => {
         let room = message.guild.channels.find('name' , collected.first().content);
-        if(!room) return message.channel.send(':heavy_multiplication_x:| **Böyle ir kanal bulamadım**');
+        if(!room) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Kanal Bulamadım!**');
         room = collected.first().content;
         collected.first().delete();
-        msg.edit(':eight_pointed_black_star:| **Çekilişin süresini belirle (1s, 1m, 1h, 1d, 1w)**').then(msg => {
+        msg.edit(':eight_pointed_black_star:| **Çekilişin Süresini Belirle (1s, 1m, 1h, 1d, 1w)**').then(msg => {
           message.channel.awaitMessages(filter, {
             max: 1,
             time: 20000,
             errors: ['time']
           }).then(collected => {
-            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send(':heavy_multiplication_x:| **Böyle bir süre bilmiyorum :(**');
+            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send(':heavy_multiplication_x:| **Böyle Bir Sre Bilmiyorum :(**');
             duration = collected.first().content
             collected.first().delete();
-            msg.edit(':eight_pointed_black_star:| **Şimdi de ödülü yaz bakalım**').then(msg => {
+            msg.edit(':eight_pointed_black_star:| **Şimdi De Ödülü Yaz Bakalım**').then(msg => {
               message.channel.awaitMessages(filter, {
                 max: 1,
                 time: 20000,
@@ -72,18 +72,19 @@ var filter = m => m.author.id === message.author.id;
                        .setTitle(title)
                        .setColor("#f558c9")
 			.setFooter("(DTBS bot çekiliş sistemi)")
-                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter} \nBitiş zamanı :`)
+                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter}`)
                        .setTimestamp()
                      m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
                        
                        var embedLel = new Discord.RichEmbed()
                         .setColor("#f558c9")
-                        .setDescription("Ödülünü destek talebi açarak elde edebilirsin!").setFooter("(Owner Kod Paylaşım)")
-                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` kazandın!**` , embedLel)
+                        .setDescription("Öďülün Kısa Süre Sonra Verilecektir!")
+                       .setFooter("Owner Kod Paylaşım")
+                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` Kazandın!**` , embedLel)
                 }, ms(duration));
             });
                 } catch(e) {
-                message.channel.send(`:heavy_multiplication_x:| **Maalesef gerekli yetkilerim bulunmamakta**`);
+                message.channel.send(`:heavy_multiplication_x:| **Maalesef Gerekli Yetkilerim Bulunmamakta**`);
                   console.log(e);
                 }
               });
