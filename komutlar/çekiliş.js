@@ -58,9 +58,9 @@ var filter = m => m.author.id === message.author.id;
                 message.delete();
                 try {
                   let giveEmbed = new Discord.RichEmbed()
-                  .setColor("#f558c9")
+                  .setColor("GREEN")
                   .setTitle("🎁 ÇEKİLİŞ BAŞLADI 🎁")
-                  .setDescription(`**${title}** \n🎉 Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
+                  .setDescription(`**${title}** \n🎉 Basarak Katıl \nKalan Süre : ${duration} \n**Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
                   message.guild.channels.find("name" , room).send('' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
@@ -70,19 +70,21 @@ var filter = m => m.author.id === message.author.id;
                        let endEmbed = new Discord.RichEmbed()
                        .setAuthor(message.author.username, message.author.avatarURL)
                        .setTitle(title)
-                       .setColor("#f558c9")
-                       .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter}`)
+                       .setColor("BLUE")
+                       .addField('Çekiliş Bitti 🎉',`Kazanan : ${gFilter}`)
                        .setTimestamp()
-                     m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
+                     m.edit('' , {embed: endEmbed});
                        
                        var embedLel = new Discord.RichEmbed()
-                        .setColor("#f558c9")
-                        .setDescription("Ödülünü Kısa Süre Sonra Alacaksın!").setFooter("(Owner / Kod Paylaşım)")
-                    message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` Kazandın!**` , embedLel)
+                        .setColor("BLUE")
+                       .setTitle("🎉 ÇEKİLİŞ BİTTİ 🎉")
+                        .setDescription(`**Tebrikler ${gFilter} ${title} Kazandın!**`)
+                       .setFooter("Çekiliş Sistemi")
+                    message.guild.channels.find("name" , room).send(`` , embedLel)
                 }, ms(duration));
             });
                 } catch(e) {
-                message.channel.send(`:heavy_multiplication_x:| **Maalesef Gerekli Yetkilerim Bulunmamakta**`);
+                message.channel.send(`⚠ **HATA** ⚠\nBu İşleme Devam Ede Bilmek için Yetkilerimi Kontrol Et!`);
                   console.log(e);
                 }
               });
