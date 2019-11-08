@@ -5,6 +5,7 @@ dependencies:
   jimp: 0.6.8
   moment: 2.24.0
   moment-duration-format: 2.3.2
+  ms: 2.1.2
   quick.db: 6.3.2
   return-deep-diff: 0.4.0
   simple-youtube-api: 5.2.1
@@ -2056,6 +2057,7 @@ specifiers:
   jimp: ^0.6.4
   moment: ^2.24.0
   moment-duration-format: ^2.2.2
+  ms: ^2.1.2
   quick.db: ^6.3.2
   return-deep-diff: ^0.4.0
   simple-youtube-api: ^5.2.1
