@@ -153,52 +153,92 @@ client.on("guildMemberAdd", member => {
 //kanal koruma
 
 client.on("channelDelete", async function(channel) {
-if(channel.guild.id !== "584804559793422336") return;
-    let logs = await channel.guild.fetchAuditLogs({type: 'CHANNEL_DELETE'});
-    if(logs.entries.first().executor.bot) return;
-    channel.guild.member(logs.entries.first().executor).roles.filter(role => role.name !== "@everyone").array().forEach(role => {
-              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("641190280099266560"))
-              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("636658904767660065"))
-      channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("642341579004313600"))
-    })
-const sChannel = channel.guild.channels.find(c=> c.id ==="634056823292428298")
-const cıks = new Discord.RichEmbed()
-.setColor('RANDOM')
-.setDescription(`${channel.name} Adlı Kanal Silindi!\nSilen Kişinin Yetkileri Alındı!`)
-.setFooter('Kanal Koruma Sistemi')
-sChannel.send(cıks)
-  
-channel.guild.owner.send(` **${channel.name}** Adlı Kanal Silindi!\nSilen Kişinin Yetkileri Alındı!`)
-})  
+  if (channel.guild.id !== "584804559793422336") return;
+  let logs = await channel.guild.fetchAuditLogs({ type: "CHANNEL_DELETE" });
+  if (logs.entries.first().executor.bot) return;
+  channel.guild
+    .member(logs.entries.first().executor)
+    .roles.filter(role => role.name !== "@everyone")
+    .array()
+    .forEach(role => {
+      channel.guild
+        .member(logs.entries.first().executor)
+        .removeRole(channel.guild.roles.get("641190280099266560"));
+      channel.guild
+        .member(logs.entries.first().executor)
+        .removeRole(channel.guild.roles.get("636658904767660065"));
+      channel.guild
+        .member(logs.entries.first().executor)
+        .removeRole(channel.guild.roles.get("642341579004313600"));
+    });
+  const sChannel = channel.guild.channels.find(
+    c => c.id === "634056823292428298"
+  );
+  const cıks = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .setDescription(
+      `🔸 \`${channel.name}\` Adlı Kanal Silindi!\n🔸 Silen Kişinin Yetkileri Alındı!`
+    )
+    .setFooter("Kanal Koruma Sistemi");
+  sChannel.send(cıks);
+
+  channel.guild.owner.send(
+    `🔸 \`${channel.name}\` Adlı Kanal Silindi!\n🔸 Silen Kişinin Yetkileri Alındı!`
+  );
+});
 
 //kanal koruma - kanalı geri yükleme
 
-client.on('channelDelete', channel => {
-  if(channel.type === "voice") {
-    console.log(`${channel.name} adlı sesli kanal silindi.`)
+client.on("channelDelete", channel => {
+  if (channel.type === "voice") {
+    console.log(`${channel.name} Adlı Sesli Kanal Silindi!`);
+    const aChannel = channel.guild.channels.find(
+      c => c.id === "634056823292428298"
+    );
+    const yenile = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setDescription(
+        `🔸 \`${channel.name}\` İsimli Ses Kanalı Sunucuya Geri Yüklendi!`
+      )
+      .setFooter("Kanal Koruma Sistemi");
+    aChannel.send(yenile);
     let kategoriID = channel.parentID;
     let isim = channel.name;
     let sıra = channel.position;
     let limit = channel.userLimit;
-    channel.guild.owner.send(`Merhaba. **${channel.guild.name}** adlı sunucunuzda, \`${channel.name}\` adlı sesli kanalı silindi ama ben o kanalı tekrardan onardım.`)
-    channel.clone(this.name,true,false).then(kanal => {
-      let z = kanal.guild.channels.get(kanal.id)
-      z.setParent(z.guild.channels.find(channel => channel.id === kategoriID))
-      z.edit({position:sıra,userLimit:limit})
-    })
+    channel.guild.owner.send(
+      `🔸 \`${channel.name}\` İsimli Ses Kanalını Sunucuya Geri Yükledim! `
+    );
+    channel.clone(this.name, true, false).then(kanal => {
+      let z = kanal.guild.channels.get(kanal.id);
+      z.setParent(z.guild.channels.find(channel => channel.id === kategoriID));
+      z.edit({ position: sıra, userLimit: limit });
+    });
   }
-  if(channel.type === "text") {
-    console.log(`${channel.name} adlı metin kanalı silindi.`)
+  if (channel.type === "text") {
+    console.log(`${channel.name} Adlı Metin Kanalı Silindi!`);
+    const aChannel = channel.guild.channels.find(
+      c => c.id === "634056823292428298"
+    );
+    const yenile = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setDescription(
+        `🔸 \`${channel.name}\` İsimli Metin Kanalı Sunucuya Geri Yüklendi!`
+      )
+      .setFooter("Kanal Koruma Sistemi");
+    aChannel.send(yenile);
     let açıklama = channel.topic;
     let kategoriID = channel.parentID;
     let isim = channel.name;
     let sıra = channel.position;
     let nsfw = channel.nsfw;
-    channel.guild.owner.send(`Merhaba. **${channel.guild.name}** adlı sunucunuzda, \`${channel.name}\` adlı metin kanalı silindi ama ben o kanalı tekrardan onardım.`)
-    channel.clone(this.name,true,true).then(kanal => {
-      let z = kanal.guild.channels.get(kanal.id)
-      z.setParent(z.guild.channels.find(channel => channel.id === kategoriID))
-      z.edit({position:sıra,topic:açıklama,nsfw:nsfw})
-    })
+    channel.guild.owner.send(
+      `\`${channel.name}\` İsimli Metin Kanalını Sunucuya Geri Yükledim!`
+    );
+    channel.clone(this.name, true, true).then(kanal => {
+      let z = kanal.guild.channels.get(kanal.id);
+      z.setParent(z.guild.channels.find(channel => channel.id === kategoriID));
+      z.edit({ position: sıra, topic: açıklama, nsfw: nsfw });
+    });
   }
-}) 
+});
