@@ -177,13 +177,13 @@ client.on("channelDelete", async function(channel) {
   const cıks = new Discord.RichEmbed()
     .setColor("RANDOM")
     .setDescription(
-      `🔸 \`${channel.name}\` Adlı Kanal Silindi!\n🔸 Silen Kişinin Yetkileri Alındı!`
+      `🔸 \`${channel.name}\` Adlı Kanal Silindi, Silen Kişinin Yetkileri Alındı!`
     )
     .setFooter("Kanal Koruma Sistemi");
   sChannel.send(cıks);
 
   channel.guild.owner.send(
-    `🔸 \`${channel.name}\` Adlı Kanal Silindi!\n🔸 Silen Kişinin Yetkileri Alındı!`
+    `🔸 \`${channel.name}\` Adlı Kanal Silindi, Silen Kişinin Yetkileri Alındı!`
   );
 });
 
@@ -192,16 +192,16 @@ client.on("channelDelete", async function(channel) {
 client.on("channelDelete", channel => {
   if (channel.type === "voice") {
     console.log(`${channel.name} Adlı Sesli Kanal Silindi!`);
-    const aChannel = channel.guild.channels.find(
+    const bChannel = channel.guild.channels.find(
       c => c.id === "634056823292428298"
     );
-    const yenile = new Discord.RichEmbed()
+    const yenile1 = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(
         `🔸 \`${channel.name}\` İsimli Ses Kanalı Sunucuya Geri Yüklendi!`
       )
       .setFooter("Kanal Koruma Sistemi");
-    aChannel.send(yenile);
+    bChannel.send(yenile1);
     let kategoriID = channel.parentID;
     let isim = channel.name;
     let sıra = channel.position;
