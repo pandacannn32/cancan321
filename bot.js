@@ -161,12 +161,15 @@ if(channel.guild.id !== "584804559793422336") return;
               channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("636658904767660065"))
       channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("642341579004313600"))
     })
-const sChannel = channel.guild.channels.find(c=> c.id ==="log kanal id")
+const sChannel = channel.guild.channels.find(c=> c.id ==="634056823292428298")
 const cıks = new Discord.RichEmbed()
 .setColor('RANDOM')
-.setDescription(`${channel.name} Adlı Kanal Silindi! ${message.channel.name} `)
+.setDescription(`${channel.name} Adlı Kanal Silindi!\nSilen Kişinin Yetkileri Alındı!`)
 .setFooter('Kanal Koruma Sistemi')
 sChannel.send(cıks)
   
-channel.guild.owner.send(` **${channel.name}** adlı Kanal silindi Silen  kişinin yetkilerini aldım:tiks:`)
+channel.guild.owner.send(` **${channel.name}** Adlı Kanal Silindi!\nSilen Kişinin Yetkileri Alındı!`)
 })  
+
+//kanal koruma - kanalı geri yükleme
+
