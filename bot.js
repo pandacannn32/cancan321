@@ -233,7 +233,7 @@ client.on("channelDelete", channel => {
     let sıra = channel.position;
     let nsfw = channel.nsfw;
     channel.guild.owner.send(
-      `\`${channel.name}\` İsimli Metin Kanalını Sunucuya Geri Yükledim!`
+      `🔸 \`${channel.name}\` İsimli Metin Kanalını Sunucuya Geri Yükledim!`
     );
     channel.clone(this.name, true, true).then(kanal => {
       let z = kanal.guild.channels.get(kanal.id);
