@@ -157,13 +157,14 @@ if(channel.guild.id !== "584804559793422336") return;
     let logs = await channel.guild.fetchAuditLogs({type: 'CHANNEL_DELETE'});
     if(logs.entries.first().executor.bot) return;
     channel.guild.member(logs.entries.first().executor).roles.filter(role => role.name !== "@everyone").array().forEach(role => {
-              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get(""))
-              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("alıncak rol 2"))
+              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("641190280099266560"))
+              channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("636658904767660065"))
+      channel.guild.member(logs.entries.first().executor).removeRole(channel.guild.roles.get("642341579004313600"))
     })
 const sChannel = channel.guild.channels.find(c=> c.id ==="log kanal id")
 const cıks = new Discord.RichEmbed()
 .setColor('RANDOM')
-.setDescription(`${channel.name} adlı Kanal silindi Silen kişinin yetkilerini  çekiyom moruk çıkssss :tiks:`)
+.setDescription(`${channel.name} Adlı Kanal Silindi! ${message.channel.name} `)
 .setFooter('Kanal Koruma Sistemi')
 sChannel.send(cıks)
   
