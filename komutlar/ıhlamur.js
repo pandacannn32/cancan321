@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
+
 exports.run = (client, message, params) => {
   if (!message.guild) {
     const ozelmesajuyari = new Discord.RichEmbed()
@@ -14,10 +16,11 @@ exports.run = (client, message, params) => {
       .setColor("#3447003")
       .setTimestamp()
       .setDescription("")
+      .setURL("")
       .setImage(
-        "https://cdn.discordapp.com/attachments/645234211808346112/645290712962826240/hangi-hastaliga-hangi-kis-icecegi-iyi-gelir--2641463.Gif.gif"
+        `tps://cdn.discordapp.com/attachments/645234211808346112/645290712962826240/hangi-hastaliga-hangi-kis-icecegi-iyi-gelir--2641463.Gif.gif`
       );
-    return message.channel.sendE(ıhlamur);
+    return message.channel.send(ıhlamur);
   }
 };
 
