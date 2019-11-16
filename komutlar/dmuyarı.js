@@ -1,36 +1,30 @@
-const Discord = require('discord.js')
-const request = require('request')
+const Discord = require("discord.js");
 
-exports.run = async (client, message, args) => {
-    if(!args[0]) return message.channel.send("Lütfen dizi adı girin.")
-    request(`https://imdb.com ${args.join(" ")}`, function (error, response, body) {
-        if (JSON.parse(body).hata) return message.channel.send('Hata: ' + JSON.parse(body).hata);
-        var veri = JSON.parse(body)
-        const embed = new Discord.RichEmbed()
-            .addField("İsim", veri.isim)
-            .addField("Açıklama", veri.açıklama)
-            .addField("Süre", veri.süre)
-            .addField("Kategoriler", veri.kategoriler.join(", "))
-            .addField("Ülke", veri.ülke)
-            .addField("Çıkış Yılı", veri.yıl)
-            .addField("Sezon Sayısı", veri.sezonlar)
-            .addField("Bölüm Sayısı", veri.bölümler)
-            .addField("IMDB Puanı", veri.imdb)
-            .setColor(0x00ffff)
-        message.channel.send({embed})
-    })
-}
-
+module.exports.run = async (bot, message, args) => {
+  //if(message.author.id !== "534724915593609216") return;
+  //message.delete();
+  let botmessage = args.join(" ");
+  let embed = new Discord.RichEmbed()
+    .setTitle(`Link Kısaltıcı`)
+    .setDescription(
+      `[Kısaltılan Link İçin Tıkla]( https://www.pnd.tl/st/?api=9d073993d7f2b7a84f17aa51a3f68e0333f90cc1&url=${botmessage})`
+    )
+    .setColor("BLUE")
+    .setFooter(
+      "Uyarı: Kısaltılan Linklerdeki Reklamlardan Botumuz Sorumlu Değildir!"
+    );
+  message.channel.sendEmbed(embed);
+};
 exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: [],
-    permLevel: 0,
-    kategori: `arama komutları`
-}
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0,
+  kategori: ``
+};
 
 exports.help = {
-    name: `dizi`,
-    description: `Dizi hakkında bilgi verir.`,
-    usage: `dizi [dizi]`
-}
+  name: `link-kısalt`,
+  description: `Link kısaltır!`,
+  usage: `link-kısalt {link} `
+};
