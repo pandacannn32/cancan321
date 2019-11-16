@@ -1,70 +1,36 @@
-const request = require("request-promise-native");
+const Discord = require('discord.js')
+const request = require('request')
 
-exports.run = async (Bastion, message, args) => {
-  try {
-    if (args.length < 1) {
-      return message.reply("**Doğru Kullanım:** `${prefix}gif-ara <aranacak gif>`");
-    }
-
-    let options = {
-      url: "http://api.giphy.com/v1/gifs/search",
-      qs: {
-        q: encodeURI(args.join("+")),
-        api_key: "dc6zaTOxFJmzC",
-        limit: 10,
-        offset: 0
-      },
-      json: true
-    };
-
-    let response = await request(options);
-
-    if (response.data.length) {
-      message.channel
-        .send({
-          embed: {
-            color: 0x00ae86,
-            title: `Aranan GIF: ${args.join(" ")}`.slice(0, 256),
-            image: {
-              url:
-                response.data[Math.floor(Math.random() * response.data.length)]
-                  .images.original.url
-            }
-          }
-        })
-        .catch(e => {
-          console.log(e);
-        });
-    } else {
-      return Bastion.emit(
-        "hata",
-        "",
-        Bastion.i18n.error(message.guild.language, "GIF Bulunamadı!"),
-        message.channel
-      );
-    }
-  } catch (e) {
-    if (e.response) {
-      return Bastion.emit(
-        "HATA",
-        e.response.statusCode,
-        e.response.statusMessage,
-        message.channel
-      );
-    }
-    console.log(e);
-  }
-};
+exports.run = async (client, message, args) => {
+    if(!args[0]) return message.channel.send("Lütfen dizi adı girin.")
+    request(`https://imdb.com ${args.join(" ")}`, function (error, response, body) {
+        if (JSON.parse(body).hata) return message.channel.send('Hata: ' + JSON.parse(body).hata);
+        var veri = JSON.parse(body)
+        const embed = new Discord.RichEmbed()
+            .addField("İsim", veri.isim)
+            .addField("Açıklama", veri.açıklama)
+            .addField("Süre", veri.süre)
+            .addField("Kategoriler", veri.kategoriler.join(", "))
+            .addField("Ülke", veri.ülke)
+            .addField("Çıkış Yılı", veri.yıl)
+            .addField("Sezon Sayısı", veri.sezonlar)
+            .addField("Bölüm Sayısı", veri.bölümler)
+            .addField("IMDB Puanı", veri.imdb)
+            .setColor(0x00ffff)
+        message.channel.send({embed})
+    })
+}
 
 exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ["gif", "gifara"],
-  permLevel: 0
-};
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: 0,
+    kategori: `arama komutları`
+}
 
 exports.help = {
-  name: "gif-ara",
-  description: "Mesajınızla ilgili gifleri Giphy'da aratır.",
-  usage: "gif-ara <aranacak gif>"
-};
+    name: `dizi`,
+    description: `Dizi hakkında bilgi verir.`,
+    usage: `dizi [dizi]`
+}

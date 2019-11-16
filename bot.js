@@ -242,10 +242,3 @@ client.on("channelDelete", channel => {
     });
   }
 });
-
-//etiket uyari
-client.on('message', msg => {
-  if (msg.content.toLowerCase() === '<@547501501430497300>') {
-    msg.reply('SAHİBİ LÜTFEN ETİKETLEME!');
-  }
-});
