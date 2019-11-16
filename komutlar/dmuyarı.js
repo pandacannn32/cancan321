@@ -24,7 +24,7 @@ exports.run = async (Bastion, message, args) => {
         .send({
           embed: {
             color: 0x00ae86,
-            title: `: ${args.join(" ")}`.slice(0, 256),
+            title: `Aranan GIF: ${args.join(" ")}`.slice(0, 256),
             image: {
               url:
                 response.data[Math.floor(Math.random() * response.data.length)]
@@ -39,14 +39,14 @@ exports.run = async (Bastion, message, args) => {
       return Bastion.emit(
         "hata",
         "",
-        Bastion.i18n.error(message.guild.language, "bulunamadı", "görsel"),
+        Bastion.i18n.error(message.guild.language, "GIF Bulunamadı!"),
         message.channel
       );
     }
   } catch (e) {
     if (e.response) {
       return Bastion.emit(
-        "hata",
+        "HATA",
         e.response.statusCode,
         e.response.statusMessage,
         message.channel
