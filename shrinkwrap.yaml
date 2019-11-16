@@ -6,10 +6,12 @@ dependencies:
   moment: 2.24.0
   moment-duration-format: 2.3.2
   ms: 2.1.2
+  os: 0.1.1
   quick.db: 6.3.2
   request-promise-native: 1.0.8
   return-deep-diff: 0.4.0
   simple-youtube-api: 5.2.1
+  speedtest-net: 1.6.0
   weather-js: 2.0.0
   ytdl-core: 0.29.7
 packages:
@@ -380,6 +382,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
+  /agent-base/4.3.0:
+    dependencies:
+      es6-promisify: 5.0.0
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
   /ajv/6.10.2:
     dependencies:
       fast-deep-equal: 2.0.1
@@ -663,6 +673,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+  /debug/3.2.6:
+    dependencies:
+      ms: 2.1.2
+    dev: false
+    resolution:
+      integrity: sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
   /debug/4.1.1:
     dependencies:
       ms: 2.1.2
@@ -717,6 +733,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ZyIm3HTI95mtNTB9+TaroRrNYBg=
+  /draftlog/1.0.12:
+    dev: false
+    resolution:
+      integrity: sha1-fbajxbYhBrsy3Uo11nvMy2x9naA=
   /ecc-jsbn/0.1.2:
     dependencies:
       jsbn: 0.1.1
@@ -798,6 +818,16 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-qZryBOJjV//LaxLTV6UC//WewneB3LcXOL9NP++ozKVXsIIIpm/2c13UDiD9Jp2eThsecw9m3jPqDwTyobcdbg==
+  /es6-promise/4.2.8:
+    dev: false
+    resolution:
+      integrity: sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+  /es6-promisify/5.0.0:
+    dependencies:
+      es6-promise: 4.2.8
+    dev: false
+    resolution:
+      integrity: sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
   /escape-html/1.0.3:
     dev: false
     resolution:
@@ -1089,6 +1119,15 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-ZTTX0MWrsQ2ZAhA1cejAwDLycFsd7I7nVtnkT3Ol0aqodaKW+0CTZDQ1uBv5whptCnc8e8HeRRJxRs0kmm/Qfw==
+  /http-proxy-agent/2.1.0:
+    dependencies:
+      agent-base: 4.3.0
+      debug: 3.1.0
+    dev: false
+    engines:
+      node: '>= 4.5.0'
+    resolution:
+      integrity: sha512-qwHbBLV7WviBl0rQsOzH6o5lwyOIvwp/BdFnvVxXORldu5TmjFfjzBcWUWS5kWAZhmv+JtiDhSuQCp4sBfbIgg==
   /http-signature/1.2.0:
     dependencies:
       assert-plus: 1.0.0
@@ -1100,6 +1139,15 @@ packages:
       npm: '>=1.3.7'
     resolution:
       integrity: sha1-muzZJRFHcvPZW2WmCruPfBj7rOE=
+  /https-proxy-agent/3.0.1:
+    dependencies:
+      agent-base: 4.3.0
+      debug: 3.2.6
+    dev: false
+    engines:
+      node: '>= 4.5.0'
+    resolution:
+      integrity: sha512-+ML2Rbh6DAuee7d07tYGEKOEi2voWPUGan+ExdPbPW6Z3svq+JCqr0v8WmKPOkz1vOVykPCBSuobe7G8GJUtVg==
   /iconv-lite/0.4.23:
     dependencies:
       safer-buffer: 2.1.2
@@ -1438,6 +1486,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=
+  /os/0.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-IIhF6J4ZOtTZcUdLk5R3NqVtE/M=
   /pako/1.0.10:
     dev: false
     resolution:
@@ -1817,6 +1869,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2A892lrj0GcgR/9Qk81EaY2gYhCBxurV0PfmmESO6p27QPrUK1J3zdns+5QPqvUYK2q657nSj0guoIil9+7eFg==
+  /speedtest-net/1.6.0:
+    dependencies:
+      chalk: 2.4.2
+      draftlog: 1.0.12
+      http-proxy-agent: 2.1.0
+      https-proxy-agent: 3.0.1
+      xml2js: 0.4.22
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-uxeA4BGApj3Ghb6VQtcsem0ZoeyQGwLDzL6WP3hJiegS9GBIvpPKDeTzY5/K2/CMoZcihrVYIW3yIABQb2LMOg==
   /sshpk/1.16.1:
     dependencies:
       asn1: 0.2.4
@@ -2100,9 +2163,11 @@ specifiers:
   moment: ^2.24.0
   moment-duration-format: ^2.2.2
   ms: ^2.1.2
+  os: ^0.1.1
   quick.db: ^6.3.2
   request-promise-native: ^1.0.8
   return-deep-diff: ^0.4.0
   simple-youtube-api: ^5.2.1
+  speedtest-net: ^1.6.0
   weather-js: ^2.0.0
   ytdl-core: ^0.29.3
