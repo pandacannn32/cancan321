@@ -6,9 +6,7 @@ exports.run = function(client, msg, author) {
   let yazi = msg.mentions.members.first();
   if (!yazi) {
     msg.channel.sendMessage(
-      "**Örnek Kullanım: `" +
-        prefix +
-        "öpücük <@kullanıcı>` | İstediğiniz Kişiye Öpücük Atar!**"
+      "**Örnek Kullanım:** `" + prefix + "öp <@kullanıcı>`"
     );
   }
   if (yazi) {
