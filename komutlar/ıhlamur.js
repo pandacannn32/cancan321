@@ -13,7 +13,7 @@ exports.run = (client, message, params) => {
   }
   if (message.channel.type !== "dm") {
     const ıhlamur = new Discord.RichEmbed()
-      .setTitle("<@" + message.author.id + "> Ihlamur İçti")
+      .setTitle(`${message.author.username}  Ihlamur İçti`)
       .setColor("RANDOM")
       .setTimestamp()
       .setDescription("")
