@@ -5,10 +5,10 @@ var speedTest = require('speedtest-net');
 exports.run = (client, message) => {
   var osType = os.type();
 
-     message.channel.send(`:timer: | İnternet Hızınız Yükleniyor, lütfen bekleyin.`).then(m => m.delete(3000));
-     message.channel.send(`:timer: | Pinginiz Hesaplanıyor, lütfen bekleyin.`).then(m => m.delete(9000));
-     message.channel.send(`:timer: | Host Aranıyor, lütfen bekleyin.`).then(m => m.delete(9000));
-     message.channel.send(`:timer: | İşletim Sistemi Hesaplanıyor, lütfen bekleyin.`).then(m => m.delete(12000));
+     message.channel.send(`🚄 | İnternet Hızınız Yükleniyor!`).then(m => m.delete(4000));
+     message.channel.send(`⏳ | Pinginiz Hesaplanıyor!`).then(m => m.delete(4000));
+     message.channel.send(`💮 | Host Aranıyor!`).then(m => m.delete(4000));
+     message.channel.send(`🚀 | İşletim Sistemi Hesaplanıyor!`).then(m => m.delete(4000));
   
   if (osType === 'Darwin') osType = 'macOS'
   else if (osType === 'Windows') osType = 'Windows'
@@ -20,9 +20,7 @@ exports.run = (client, message) => {
 const embed = new Discord.RichEmbed()
  .setColor('#000000')
 .setTitle('**İnternet Bilgilerin**')
-.addField(`:arrow_down: İndirme: **${data.speeds.download} MB**      :arrow_up: Yükleme: **${data.speeds.upload} MB **`)
-.addField(` :round_pushpin: Ping: **${client.ping}**`)
-.addField(`:level_slider: İşletim Sistemi: **${osType}** \n \n:desktop: İnternet Sağlayıcısı: **${data.client.isp}** \n \n:file_cabinet: Host: **${data.server.host}**`)
+.setDescription(`:arrow_down: İndirme: **${data.speeds.download} MB**     :arrow_up: Yükleme: **${data.speeds.upload} MB**\n \n:round_pushpin: Ping: **${client.ping}**\n \n:level_slider: İşletim Sistemi: **${osType}** \n \n:desktop: İnternet Sağlayıcısı: **${data.client.isp}** \n \n:file_cabinet: Host: **${data.server.host}**`)
 
   message.channel.send(embed)
 });
