@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 
 exports.run = function(client, message) {
  
-  var role = message.guild.roles.find(role => role.id === "638769427504168961"); 
-  if (message.member.roles.has(role.id)) return message.channel.send(":warning: `Bu Role Zaten Sahipsin` :warning:")
-  message.member.addRole(role);
+  var js = message.guild.roles.find(js => js.id === "638769427504168961"); 
+  if (message.member.roles.has(js.id)) return message.channel.send(":warning: `Bu Role Zaten Sahipsin` :warning:")
+  message.member.addRole(js);
   message.channel.send(`✅ İşlem Başarılı!`);
 };
 
