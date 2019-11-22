@@ -24,6 +24,6 @@ module.exports.conf = {
 
 module.exports.help = {
   name: "reboot",
-  description: "orascoder",
+  description: "",
   usage: "reboot"
 };
