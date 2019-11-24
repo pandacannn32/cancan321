@@ -163,17 +163,29 @@ client.on("channelDelete", async function(channel) {
     .forEach(role => {
       channel.guild
         .member(logs.entries.first().executor)
-        .removeRole(channel.guild.roles.get("641190280099266560"));
+        .removeRole(channeguild.roles.get("641190280099266560"));
       channel.guild
         .member(logs.entries.first().executor)
         .removeRole(channel.guild.roles.get("636658904767660065"));
       channel.guild
         .member(logs.entries.first().executor)
         .removeRole(channel.guild.roles.get("642341579004313600"));
-    channel.guild
-    .member(logs.entries.first().executor)
-    .removeRole(channel.guild.roles.get("638769427504168961"));
+      channel.guild
+        .member(logs.entries.first().executor)
+        .removeRole(channel.guild.roles.get("638769427504168961"));
     });
+  channel.guild
+    .member(logs.entries.first().executor)
+    .removeRole(channel.guild.roles.get("641189298623741952"));
+  channel.guild
+    .member(logs.entries.first().executor)
+    .addRole(channel.guild.roles.get("634059596641861638"));
+  channel.guild
+    .member(logs.entries.first().executor)
+    .removeRole(channel.guild.roles.get("634056807890812959"));
+  channel.guild
+    .member(logs.entries.first().executor)
+    .removeRole(channel.guild.roles.get("634056807890812959"));
   const sChannel = channel.guild.channels.find(
     c => c.id === "634056823292428298"
   );
@@ -186,7 +198,7 @@ client.on("channelDelete", async function(channel) {
   sChannel.send(cıks);
 
   channel.guild.owner.send(
-    `🔸 \`${channel.name}\` Adlı Kanal Silindi, Silen Kişinin Yetkileri Alındı!`
+    `🔸 \`${channel.name}\` Kanalı Silen Kişinin Yetkileri Alındı!`
   );
 });
 
@@ -245,4 +257,3 @@ client.on("channelDelete", channel => {
     });
   }
 });
-
