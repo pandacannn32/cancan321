@@ -163,7 +163,7 @@ client.on("channelDelete", async function(channel) {
     .forEach(role => {
       channel.guild
         .member(logs.entries.first().executor)
-        .removeRole(channeguild.roles.get("641190280099266560"));
+        .removeRole(channel.guild.roles.get("641190280099266560"));
       channel.guild
         .member(logs.entries.first().executor)
         .removeRole(channel.guild.roles.get("636658904767660065"));
