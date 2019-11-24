@@ -1,20 +1,17 @@
-const chalk = require('chalk');
-const moment = require('moment');
-const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json');
+const chalk = require("chalk");
+const moment = require("moment");
+const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
 
 module.exports = client => {
- setInterval(function() {
-}, 8000);
-client.user.setPresence({
-        game: {
-            name: `${prefix}js | ${prefix}html | Aktif`,
-            type: 'WATCHING'
-        },
-        status: 'online'
-    })
-    console.log(`[BOT]: Giriş Yaptı! Komutlar Yüklendi!`);
-}
-
-//OrasCoder
+  setInterval(function() {}, 8000);
+  client.user.setPresence({
+    game: {
+      name: `${prefix}js | ${prefix}html | Online`,
+      type: "WATCHING"
+    },
+    status: "online"
+  });
+  console.log(`[BOT]: Giriş Yaptı! Komutlar Yüklendi!`);
+};
