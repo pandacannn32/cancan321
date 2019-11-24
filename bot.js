@@ -170,6 +170,9 @@ client.on("channelDelete", async function(channel) {
       channel.guild
         .member(logs.entries.first().executor)
         .removeRole(channel.guild.roles.get("642341579004313600"));
+    channel.guild
+    .member(logs.entries.first().executor)
+    .removeRole(channel.guild.roles.get("638769427504168961"));
     });
   const sChannel = channel.guild.channels.find(
     c => c.id === "634056823292428298"
