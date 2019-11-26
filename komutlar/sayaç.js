@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
         if(err) message.channel.send("Hata: " + err)
     })
     let embed = new Discord.RichEmbed()
-      .setTitle("✅Sayaç Ayarlandı✅")
+      .setTitle("✅ Sayaç Ayarlandı ✅")
       .setDescription(`🔸 **Sayaç Kanalı:** ${mkanal}\n🔸 **Sayaç:** \`${sayı}\``)
       .setFooter("Owner Bot", message.author.avatarURL)
       .setColor("RANDOM")
