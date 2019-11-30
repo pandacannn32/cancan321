@@ -1,3 +1,4 @@
+
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const ayarlar = require("./ayarlar.json");
@@ -258,3 +259,26 @@ client.on("channelDelete", channel => {
   }
 });
 
+//Rol Koruma 
+client.on("roleUpdate", async function(oldRole, newRole, message) {
+  
+   const bilgilendir = await newRole.guild.fetchAuditLogs({type: "ROLE_UPLATE"}).then(hatırla => hatırla.entries.first())
+    let yapanad= bilgilendir.executor;
+  let idler= bilgilendir.executor.id;
+  if(idler === "619325018723319819") return // yapan kişinin id si bu ise bir şey yapma
+  if(oldRole.hasPermission("ADMINISTRATOR")) return
+  
+   setTimeout(() => {
+
+     if(newRole.hasPermission("ADMINISTRATOR")){
+   newRole.setPermissions((newRole.permissions-8))    
+ }
+     
+ if(newRole.hasPermission("ADMINISTRATOR")){
+  
+     if(!client.guilds.get(newRole.guild.id).channels.has("634056816610770977")) return newRole.guild.owner.send(`Rol Koruma Nedeniyle ${yapanad} Kullanıcısı Bir Role Yönetici Verdiği İçin Rolün **Yöneticisi** Alındı. \Rol: **${newRole.name}**`)//bu id ye sahip kanal yoksa sunucu sahibine yaz
+
+  message.channels.get("634056816610770977").send(`Rol Koruma Nedeniyle ${yapanad} Kullanıcısı Bir Role Yönetici Verdiği İçin Rolün **Yöneticisi Alındı**. \Rol: **${newRole.name}**`)// belirtilen id ye sahip kanala yaz
+ }
+      }, 1000)
+  })
