@@ -257,3 +257,28 @@ client.on("channelDelete", channel => {
     });
   }
 });
+
+//rol koruma
+
+client.on("rolepdate", async function(oldRole, newRole) {
+  
+   const bilgilendir = await newRole.guild.fetchAuditLogs({type: "ROLE_UPDATE"}).then(hatırla => hatırla.entries.first())
+    let yapanad= bilgilendir.executor;
+  let idler= bilgilendir.executor.id;
+  if(idler === "619325018723319810") return // yapan kişinin id si bu ise bir şey yapma
+  if(oldRole.hasPermission("ADMINISTRATOR")) return
+  
+   setTimeout(() => {
+
+     if(newRole.hasPermission("ADMINISTRATOR")){
+   newRole.setPermissions((newRole.permissions-8))    
+ }
+     
+ if(newRole.hasPermission("ADMINISTRATOR")){
+  
+     if(!client.guilds.get(newRole.guild.id).channels.has("1111")) return newRole.guild.owner.send(`Rol Koruma Nedeniyle ${yapanad} Kullanıcısı Bir Role Yönetici Verdiği İçin Rolün **Yöneticisi** Alındı. \Rol: **${newRole.name}**`)//bu id ye sahip kanal yoksa sunucu sahibine yaz
+
+  client.channels.get("yetkili-buraya-bak").send(`Rol Koruma Nedeniyle ${yapanad} Kullanıcısı Bir Role Yönetici Verdiği İçin Rolün **Yöneticisi Alındı**. \Rol: **${newRole.name}**`)// belirtilen id ye sahip kanala yaz
+ }
+      }, 1000)
+  })
