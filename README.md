@@ -1,3 +1,3 @@
-# Server Destek <3
+# Discord Code Shâre <3
 
-● Bu Bot Alt Yapısı **Server Destek** Botuna Aittir!
+● Bu Bot Alt Yapısı **Discord Code Shâre** Sunucusuna Aittir!
