@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
       "Geliştiricim Değilsin Bu Komutu kullanamazsın.!"
     );
 
-  message.channel.sendMessage(`Başarılı! Bot yeniden başlatılıyor...`);
+  message.channel.sendMessage(`Başarılı! Bot yeniden başlatıldı...`);
   message.delete(60).then(msg => {
     console.log(`✅ | Bot Yeniden Başlatıldı...`);
 
