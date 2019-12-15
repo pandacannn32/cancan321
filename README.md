@@ -1,5 +1,5 @@
-**Discord Code Shâre <3**
+# **Discord Code Shâre <3**
 
-# Bu Komutsuz Altyapı **Discord Code Shâre** Sunucusuna Aittir!
+Bu Komutsuz Altyapı **Discord Code Shâre** Sunucusuna Aittir!
 
-
+**Umut Bayraktar ve Ekibi!**
