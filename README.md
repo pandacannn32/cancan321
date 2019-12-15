@@ -1,8 +1,6 @@
-# **Discord Code Shâre <3**
+<img src="https://cdn.discordapp.com/attachments/634056820394295306/655892630651273247/20191130_004133.gif">
 
-Bu Komutsuz Altyapı **Discord Code Shâre** Sunucusuna Aittir!
+<h1>Discord Code Shâre Boş Altyapı</h1>
 
-**Umut Bayraktar ve Ekibi!**
-
-<img alt="Discord" src="https://img.shields.io/discord/584804559793422336?color=Red&label=Discord%20Code%20Shâre&logo=Discord&logoColor=white&style=flat-square">
-
+<a href="https://discord.gg/jFRUhva">
+<img alt="Discord" src="https://img.shields.io/discord/584804559793422336?color=Red&label=Discord%20Code%20Shâre&logo=Discord&logoColor=red&style=flat-square"> </a>
