@@ -1,7 +1,5 @@
-<img src="">
+**Discord Code Shâre <3**
 
-<h1>Discord Code Shâre Boş Altyapı</h1>
+# Bu Komutsuz Altyapı **Discord Code Shâre** Sunucusuna Aittir!
 
-  <a href="https://discord.gg/jFRUhva">
-<img alt="Discord" src="https://img.shields.io/discord/?color=Red&label=Discord%20Code%20Shâre&logo=Discord&logoColor=white&style=flat-square">
-  </a>
+
