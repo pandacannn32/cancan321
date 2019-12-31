@@ -2,7 +2,7 @@
 
 <h1>Discord Code Shâre Boş Altyapı</h1>
 
-<a href="https://discord.gg/jFRUhva">
+<a href="https://discord.gg/gErKfBr">
   Sunucuya Gelmek için Tıkla </a>
   
 
