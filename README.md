@@ -2,15 +2,15 @@
 
 <h1>Discord Code Shâre Boş Altyapı</h1>
 
-<a href="https://discord.gg/URZAePE">
-  Sunucuya Gelmek için Tıkla </a>
+<a href="https://discord.gg/AybVDd4">
+  Sunucuya Gelmek için Tıkla! </a>
   
   <h1></h1>
   
-  <a href="https://m.youtube.com/channel/UCxVq3AY2ARB_ooFdyNmZ0gg">
-  Youtube Kanalına Gitmek için Tıkla </a>
+  <a href="https://codeshare.tr.ht">
+  Siteye Gitmek için Tıkla! </a>
 
-<h1>Toplamda 800 Komut ile Türkiyenin En İyisi Olma Yolunda!</h1>
+<h1>Bu Konuda Türkiyenin En İyisi Olma Yolunda!</h1>
   
   
   
