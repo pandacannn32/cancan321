@@ -26,4 +26,4 @@ _..:: BILGILER::.._
 
 **NOT 5: Komutlar Klasörüne Dosya Eklemek için komutlar/komut-ismi.js Şeklinde Yükleme Yapınız! Örnek: komutlar/reboot.js**
 
-_Code Shâre Ekibi İyi Günler Diler!_
+_Discord Code Shâre Ekibi İyi Günler Diler!_
