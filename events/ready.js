@@ -8,10 +8,10 @@ module.exports = client => {
   setInterval(function() {}, 8000);
   client.user.setPresence({
     game: {
-      name: `${prefix}js | ${prefix}html | Online`,
+      name: `Discord Code Shâre`,
       type: "WATCHING"
     },
     status: "online"
   });
-  console.log(`[BOT]: Giriş Yaptı! Komutlar Yüklendi!`);
+  console.log(`[BOT]: Giriş Yaptı! Komutlar Yüklendi! DCS Ekibine Aittir!`);
 };
