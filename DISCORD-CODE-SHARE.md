@@ -7,8 +7,8 @@
   
   <h1></h1>
   
-  <a href="https://codeshare.tr.ht">
-  Siteye Gitmek için Tıkla! </a>
+  <a href="https://umut-bayraktar.glitch.me">
+  Kurucu Hakkında Bilgi Almak için Tıkla! </a>
 
 <h1>Bu Konuda Türkiyenin En İyisi Olma Yolunda!</h1>
   
