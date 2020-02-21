@@ -1,4 +1,4 @@
-<img src="https://cdn.discordapp.com/attachments/634056820394295306/655892630651273247/20191130_004133.gif">
+<img src="https://cdn.discordapp.com/avatars/678156420553768960/bd87c9d40d28fcb696af88a1ac1a1d1b.png?size=2048">
 
 <h1>Discord Code Shâre Boş Altyapı</h1>
 
