@@ -1,8 +1,8 @@
-<img src="https://cdn.discordapp.com/avatars/678156420553768960/bd87c9d40d28fcb696af88a1ac1a1d1b.png?size=2048">
+<img src="https://cdn.discordapp.com/icons/676124992919830548/0efa113b250ef86ad840d7fd3679119f.jpg">
 
 <h1>Discord Code Shâre Boş Altyapı</h1>
 
-<a href="https://discord.gg/AybVDd4">
+<a href="https://discord.gg/Sf9XES6">
   Sunucuya Gelmek için Tıkla! </a>
   
   <h1></h1>
