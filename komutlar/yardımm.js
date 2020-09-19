@@ -9,11 +9,11 @@ const embed = new Discord.RichEmbed()
 .addField('<:pxel_kalp:756912655519711312>        |  .baby ','Rastgele bebek gifleri atar')
 .addField('<a:ats:756912744116125788>        |  .couple  ', 'Rastgele sevgili gifleri atar')
 .addField('<a:750076057679429656:756912470970335262>        |  .man   ','Rast gele erkek gifleri atar')
-.addField('<a:sar:744242920688844921>        |  .woman  ', 'Rastgele kadın gifleri atar')
-.addField('<a:hata:744254798076968971>       |  .yapımcım  ', 'Yapımcıları görürsün  ')
-.addField('<a:hata:744254798076968971>       |  .kullanıcı  ', 'Kullanıcı komutları  ')
-.addField('<a:konay:743823493459738705>      |  .gif   ','Özel anime gifleri atar')
-.addField('<a:konay:743823493459738705>      |  .anime   ','Rastgele anime gifleri atar')
+.addField('<a:714606187261198450:756917847627661420>        |  .woman  ', 'Rastgele kadın gifleri atar')
+.addField('<a:TAC:756912721059905587>        |  .yapımcım  ', 'Yapımcıları görürsün  ')
+.addField('<a:710082730720886816:756917848294817802>       |  .kullanıcı  ', 'Kullanıcı komutları  ')
+.addField('<a:yesl:756917598976999474>      |  .gif   ','Özel anime gifleri atar')
+.addField('<a:gk:756917851776090263>      |  .anime   ','Rastgele anime gifleri atar')
 
 
 
@@ -27,8 +27,8 @@ const embed = new Discord.RichEmbed()
 
 
 .setFooter(`Bu komut ${message.author.username} tarafından istendi!`, message.author.avatarURL)
-.addField(`» Linkler`, `[Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=725474753799913544&permissions=2048&scope=bot) **|** `)
-        .setFooter(`Viana  | Bot Sürümü : 0.5.1 Beta | Varsayılan Prefix : .`, client.user.avatarURL)
+.addField(`» Linkler`, `[Bot Davet Linki](https://discord.com/oauth2/authorize?client_id=756892207776006236&permissions=2048&scope=bot) **|** `)
+        .setFooter(`Chwas | Bot Sürümü : 0.5.1 Beta | Varsayılan Prefix : .`, client.user.avatarURL)
 
 
 
@@ -36,7 +36,7 @@ const embed = new Discord.RichEmbed()
 
 
 .setTimestamp()
-.setThumbnail("https://cdn.discordapp.com/attachments/694694493525377035/737036899612360774/a_0edcde786dca1aa7cb3caf12af732bc5.gif")
+.setThumbnail("https://cdn.discordapp.com/emojis/699729035336482887.gif?v=1")
 message.channel.send(embed)
 };
 exports.conf = {
