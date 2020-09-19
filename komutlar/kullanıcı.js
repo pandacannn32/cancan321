@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 exports.run = function(client, message) {
 const embed = new Discord.RichEmbed()
 .setColor('RANDOM')
-.setTitle('Viana Müzik Komutları')
+.setTitle('Chwas Gif Kullanıcı Komutları  ')
 .setTimestamp()
-.addField('<a:cal:743823689379741727>        |  .avatar ','Avatarını atar')
-.addField('<a:tekrar:743823491777953813>     |  .i  ','Botun İstatiğini Atar ')
-.addField('<a:renkligec:743823490603286538>  |  .ping  ', 'Botun pingini atar ')
+.addField('<a:750076057679429656:756912470970335262>        |  .avatar ','Avatarını atar')
+.addField('<a:750076057679429656:756912470970335262>     |  .i  ','Botun İstatiğini Atar ')
+.addField('<a:750076057679429656:756912470970335262>  |  .ping  ', 'Botun pingini atar ')
 
 
 
