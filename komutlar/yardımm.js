@@ -11,7 +11,6 @@ const embed = new Discord.RichEmbed()
 .addField('<a:750076057679429656:756912470970335262>        |  .man   ','Rast gele erkek gifleri atar')
 .addField('<a:714606187261198450:756917847627661420>        |  .woman  ', 'Rastgele kadın gifleri atar')
 .addField('<a:TAC:756912721059905587>        |  .yapımcım  ', 'Yapımcıları görürsün  ')
-.addField('<a:710082730720886816:756917848294817802>       |  .kullanıcı  ', 'Kullanıcı komutları  ')
 .addField('<a:yesl:756917598976999474>      |  .gif   ','Özel anime gifleri atar')
 .addField('<a:gk:756917851776090263>      |  .anime   ','Rastgele anime gifleri atar')
 
