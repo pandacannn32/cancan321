@@ -170,3 +170,24 @@ const atildim = new Discord.RichEmbed()
 remove.send(atildim)
 
 });
+
+
+//Saaaaaaaaaaaa
+
+
+client.on("userUpdate", async(Revenge, NYKS) => {
+  
+if(Revenge.avatarURL === NYKS.avatarURL) return;
+let botslord = NYKS.avatarURL.split("?")[0]
+
+const Kanal = client.channels.filter(Revenge => Revenge.name === 'random-gif' && Revenge.type === 'text').array().forEach(Nucceteere => {
+if (botslord.endsWith('.gif')) {
+Nucceteere.send(new Discord.Attachment(botslord))
+}
+const Kanal2 = client.channels.filter(Revenge => Revenge.name === 'random-pp' && Revenge.type === 'text').array().forEach(Revenge => {
+if (!botslord.endWith('.gif')) {
+Revenge.send(new Discord.Attachment(botslord))
+}
+})
+})
+})
