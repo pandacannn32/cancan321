@@ -41,7 +41,7 @@ message.channel.send(embed)
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['yardım'],
+  aliases: ['y','help','Yardım','Help','yardim','Yardim','HELP','YARDIM'],
   permLevel: 0
 };
 //Madára#1967
