@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message) => {
   
   const embed = new Discord.RichEmbed()
-    .setColor("BLUE")
-    .addField(`Yapımcım`, `<@630476128804536397>`)
+    .setColor("RANDOM")
+    .addField(`Yapımcılarım`, `<@713678882011742230> Ve <@640250146453454848>`)
 .setFooter(client.user.username, client.user.avatarURL)
 
   message.channel.send(embed);
@@ -13,7 +13,7 @@ module.exports.run = async (client, message) => {
 module.exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['yapımcı','yapımcım'],
+  aliases: ['yapımcı','Yapımcı','Yapımcım'],
   permLevel: 0,
   kategori: "sunucu"
 };

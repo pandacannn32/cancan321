@@ -9,10 +9,10 @@ module.exports = async bot => {
   //botetchClientValues("users.size").then(async results2 => {
 //  let shardi = bot.shard.id + 1;
   var oyun = [
-    "Her hangi bir sorunda iletişim Cewas.dll ₰#1907 ",
-    "Bizi tercih ettiğiniz için teşekkürler",
-    "a!yardım ile komutlara ulaşabilirsiniz",
-    "Yapımcım; Cewas.dll ₰#1907 ",
+    "-yardım İle Bütün Komutlar",
+    "Bizi tercih ettiğiniz için Tedkürler",
+    "Yapımcım; ☄ Lynch#0001",
+    "Yapımcım; EmEkLi MüSlÜm BaBa#1881",
     ".yardım  yazarak Botun Davet  linkine Erişebilirsiniz.",
     //`Shard: ${shardi}/${bot.shard.count}`,
     `${bot.guilds.size.toLocaleString()} Sunucu ve ${bot.guilds
