@@ -23,3 +23,4 @@ module.exports.help = {
   description: "yapımcılar",
   usage: "yapımcım"
 };
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!

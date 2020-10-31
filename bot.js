@@ -17,9 +17,9 @@ const snekfetch = require('snekfetch');
 const queue = new Map();
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 
-
-const app = express();
+const app = express();//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 app.get("/", (request, response) => {
   console.log(Date.now() + " Ping tamamdır.");
   response.sendStatus(200);
@@ -50,7 +50,7 @@ fs.readdir('./komutlar/', (err, files) => {
     });
 });
 
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 
 
 client.reload = command => {
@@ -87,7 +87,7 @@ client.load = command => {
         }
     });
 };
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 
 
 
@@ -121,7 +121,7 @@ client.elevation = message => {
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 // client.on('debug', e => {
 //   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
+// })//【Maiar】Code★Botlist★Uptime AİTDİR!!!;
 
 client.on('warn', e => {
     console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
@@ -136,7 +136,7 @@ client.login(ayarlar.token);
 
 
 client.on("guildCreate", guild => {  // sunucuya eklendim ve atıldım
-let add = client.channels.get("750120598889431090")
+let add = client.channels.get("kanal id")
 const eklendim = new Discord.RichEmbed()
 
 .setTitle(`Sunucuya Eklendim`)
@@ -154,9 +154,9 @@ add.send(eklendim)
 });
 
 client.on("guildDelete", guild => {
-let remove = client.channels.get("750120598889431090")
+let remove = client.channels.get("kanalid")
 const atildim = new Discord.RichEmbed()
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 .setTitle(`Sunucudan Atıldım`)
 .setTimestamp()
 .setColor("RED")
@@ -172,8 +172,8 @@ remove.send(atildim)
 });
 
 
-//Saaaaaaaaaaaa
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 
 client.on("userUpdate", async(Revenge, NYKS) => {
   
@@ -191,3 +191,4 @@ Revenge.send(new Discord.Attachment(botslord))
 })
 })
 })
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
