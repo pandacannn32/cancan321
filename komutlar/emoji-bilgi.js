@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 exports.run = (client, message, args) => {
     let emojiname = args[0];
     const emoji = (message.guild.emojis.find("name", `${emojiname}`))
@@ -13,13 +13,13 @@ exports.run = (client, message, args) => {
     .setTimestamp()
     message.channel.send(embed)
 }
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: ['emoji-bilgi'],
     permLevel: 0
-}
+}//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 
 exports.help = {
     name: 'emojibilgi',

@@ -17,7 +17,7 @@ module.exports.conf = {
   permLevel: 0,
   kategori: "sunucu"
 };
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 module.exports.help = {
   name: "yapımcım",
   description: "yapımcılar",

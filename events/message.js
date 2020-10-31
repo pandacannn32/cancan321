@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const ayarlar = require('../ayarlar.json');
 let talkedRecently = new Set();
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 module.exports = message => {
   if (talkedRecently.has(message.author.id)) {
     return;
-  }
+  }//【Maiar】Code★Botlist★Uptime AİTDİR!!!
   talkedRecently.add(message.author.id);
 	setTimeout(() => {
     talkedRecently.delete(message.author.id);
@@ -21,7 +21,7 @@ module.exports = message => {
     cmd = client.commands.get(command);
   } else if (client.aliases.has(command)) {
     cmd = client.commands.get(client.aliases.get(command));
-  }
+  }//【Maiar】Code★Botlist★Uptime AİTDİR!!!
   if (cmd) {
    if (cmd.conf.enabled === false) {
       if (!ayarlar.sahip.includes(message.author.id) && !ayarlar.sahip.includes(message.author.id)) {
@@ -46,7 +46,7 @@ module.exports = message => {
 					.setColor("RED")
 				message.channel.send({embed})
 				return
-			}
+			}//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 		}
     if (cmd.conf.permLevel === 3) {
 			if (!message.member.hasPermission("BAN_MEMBERS")) {
@@ -80,3 +80,4 @@ module.exports = message => {
   }
 
 };
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!

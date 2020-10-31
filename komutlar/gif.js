@@ -2,7 +2,7 @@ const { Client, MessageAttachment } = require('discord.js');
 const Discord = require("discord.js");
 const ayarlar = require('../ayarlar.json');
 exports.run = (client, message, args) => {
-  
+  //【Maiar】Code★Botlist★Uptime AİTDİR!!!
       var animegif = [
         "https://media.tenor.com/images/74a2b4b0fc38bc87c81f68b0bb24572d/tenor.gif",
         "https://media.tenor.com/images/4e4aca6054a37384ac0beb7f3937cb01/tenor.gif",
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
         "https://media.tenor.com/images/c8454d4fd79d879e59c16be2d563b173/tenor.gif",
         "https://media.tenor.com/images/5529b6a5e76bcab850a1da0b9a50b1ae/tenor.gif",
 "https://media.tenor.com/images/d1c398bfc180d625595ab735dd67192e/tenor.gif",  
-"https://media.tenor.com/images/d139e96072bae377be522258f7128881/tenor.gif",
+"https://media.tenor.com/images/d139e96072bae377be522258f7128881/tenor.gif",//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 "https://media.tenor.com/images/aea5f4661f18ee280315a7034c63c41a/tenor.gif",
 "https://media.tenor.com/images/6665c57af123e46c25195d4bcea1c13b/tenor.gif",
 "https://media.tenor.com/images/d829a130a9242b8a9c49f0774016246d/tenor.gif",
@@ -35,7 +35,7 @@ exports.run = (client, message, args) => {
  "https://media.tenor.com/images/1875b4c6842ccd891189ffed3c70df4e/tenor.gif",
 "https://media.tenor.com/images/cb6f2472196b92a71e6fdba7dc79a3b6/tenor.gif",
 "https://media.tenor.com/images/c6677ada71c3277209a5eda88f5360cd/tenor.gif",
-"https://media.tenor.com/images/a2ad831629238e1550010aac692c74a4/tenor.gif",
+"https://media.tenor.com/images/a2ad831629238e1550010aac692c74a4/tenor.gif",//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 "https://media.tenor.com/images/f19130e5f6d7b59a7c588323e280f7e5/tenor.gif",
 "https://media.tenor.com/images/b1162d6c50666397d93372d579b5fa67/tenor.gif",
 "https://media.tenor.com/images/fdb3feec0e46f50ff17ea3910011781a/tenor.gif",
@@ -61,16 +61,16 @@ exports.run = (client, message, args) => {
 "https://media.tenor.com/images/719d9d1df2ab4e3a5081259e980c73a3/tenor.gif",
 "https://media.tenor.com/images/4fdf8afc50e6b2045be28b3b58c2d221/tenor.gif",
 "https://media.tenor.com/images/5864d765bbcea86447c10435d318726f/tenor.gif",
-"https://media.tenor.com/images/0808db24376207a57a67a18c1809d99f/tenor.gif",
+"https://media.tenor.com/images/0808db24376207a57a67a18c1809d99f/tenor.gif",//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 "",
-"",
+"",//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 ];
-  
+  //【Maiar】Code★Botlist★Uptime AİTDİR!!!
   var animegif1 = animegif[Math.floor(Math.random(1) * animegif.length)];
   
   message.channel.send(new Discord.Attachment(animegif1));
 }
-exports.conf = {
+exports.conf = {//【Maiar】Code★Botlist★Uptime AİTDİR!!!
     enabled: true,
     guildOnly: true,
     aliases: [""],

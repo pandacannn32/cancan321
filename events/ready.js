@@ -3,17 +3,17 @@ const moment = require("moment");
 const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
-
+//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 module.exports = async bot => {
   //bot.shard.fetchClientValues("guilds.size").then(async results => {
   //botetchClientValues("users.size").then(async results2 => {
 //  let shardi = bot.shard.id + 1;
   var oyun = [
-    "-yardım İle Bütün Komutlar",
-    "Bizi tercih ettiğiniz için Tedkürler",
-    "Yapımcım; ☄ Lynch#0001",
-    "Yapımcım; EmEkLi MüSlÜm BaBa#1881",
-    ".yardım  yazarak Botun Davet  linkine Erişebilirsiniz.",
+    "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
+       "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
+      "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
+       "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
+      "【Maiar】Code★Botlist★Uptime AİTDİR!!!"
     //`Shard: ${shardi}/${bot.shard.count}`,
     `${bot.guilds.size.toLocaleString()} Sunucu ve ${bot.guilds
       .reduce((a, b) => a + b.memberCount, 0)
@@ -27,5 +27,5 @@ module.exports = async bot => {
   }, 12000);
   bot.user.setStatus("online");
   //});
-  //});
-};
+  //});//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+};//【Maiar】Code★Botlist★Uptime AİTDİR!!!//【Maiar】Code★Botlist★Uptime AİTDİR!!!
