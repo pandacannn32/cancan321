@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const moment = require('moment');
 var Jimp = require('jimp');
 const { Client, Util } = require('discord.js');
-const weather = require('weather-js')
 const fs = require('fs');
 const db = require('quick.db');
 const http = require('http');
@@ -15,19 +14,10 @@ const path = require('path');
 const request = require('request');
 const snekfetch = require('snekfetch');
 const queue = new Map();
-const YouTube = require('simple-youtube-api');
-const ytdl = require('ytdl-core');
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
 
-const app = express();//【Maiar】Code★Botlist★Uptime AİTDİR!!!
-app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping tamamdır.");
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
+//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!
+
+
 
 var prefix = ayarlar.prefix;
 
@@ -50,7 +40,7 @@ fs.readdir('./komutlar/', (err, files) => {
     });
 });
 
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!
 
 
 client.reload = command => {
@@ -87,7 +77,7 @@ client.load = command => {
         }
     });
 };
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!
 
 
 
@@ -121,7 +111,7 @@ client.elevation = message => {
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 // client.on('debug', e => {
 //   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// })//【Maiar】Code★Botlist★Uptime AİTDİR!!!;
+// })//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!;
 
 client.on('warn', e => {
     console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
@@ -135,60 +125,108 @@ client.login(ayarlar.token);
 
 
 
-client.on("guildCreate", guild => {  // sunucuya eklendim ve atıldım
-let add = client.channels.get("kanal id")
-const eklendim = new Discord.RichEmbed()
+client.on('guildCreate', async guild => {
+  const embed2 = new Discord.MessageEmbed()
+  .setTitle('Yeni Sunucu')
+  .setDescription('Sunucu Adı: ' + guild.name)
+  .addField('Kişi Sayısı:', guild.memberCount)
+  .addField('Sunucu Sahibi', guild.owner)
+  .setThumbnail(guild.iconURL)
+  const channel = client.channels.cache.find(ch => ch.id === '775356154145800193')
+  channel.send(embed2)
+})
 
-.setTitle(`Sunucuya Eklendim`)
-.setTimestamp()
-.setColor("GREEN")
-.setThumbnail(guild.iconURL)
-.addField(`Sunucu İsmi`,guild.name)
-.addField(`Sunucu ID`, guild.id)
-.addField(`Kurucu`,guild.owner.user.tag)
-.addField(`Kurucu ID`,guild.owner.user.id)
-.addField(`Üye Sayısı`,guild.memberCount)
+client.on('guildDelete', async guild => {
+  const embed2 = new Discord.MessageEmbed()
+  .setTitle('Bir Sunucudan Çıktım')
+  .setDescription('Sunucu Adı: ' + guild.name)
+  .addField('Kişi Sayısı:', guild.memberCount)
+  .addField('Sunucu Sahibi:', guild.owner)
+  .setThumbnail(guild.iconURL)
+  const channel = client.channels.cache.find(ch => ch.id === '775356154145800193')
+  channel.send(embed2)
+})
 
-add.send(eklendim)
 
+//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!
+//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!
+
+
+//【Gif Sky Random Bots】Code★Botlist★Uptime AİTDİR!!!
+
+
+
+client.on("message", message => {
+  if (message.content.toLowerCase() === "g!emojiid") {
+    if(message.channel.id !== '774672187977367564') return message.reply('Komut Sadece <#774672187977367564> Kullanılır.')
+    message.channel.send(
+      message.guild.emojis.cache.size === 0
+        ? "Emoji yok"
+        : message.guild.emojis.cache.map(e => `${e.id} | ${e.toString()}`).join("\n"),
+      { code: "xl", split: true }
+    );
+  }
 });
 
-client.on("guildDelete", guild => {
-let remove = client.channels.get("kanalid")
-const atildim = new Discord.RichEmbed()
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
-.setTitle(`Sunucudan Atıldım`)
-.setTimestamp()
-.setColor("RED")
-.setThumbnail(guild.iconURL)
-.addField(`Sunucu İsmi`,guild.name)
-.addField(`Sunucu ID`, guild.id)
-.addField(`Kurucu`,guild.owner.user.tag)
-.addField(`Kurucu ID`,guild.owner.user.id)
-.addField(`Üye Sayısı`,guild.memberCount)
-
-remove.send(atildim)
-
+client.on("guildCreate", async guild => {
+  const biggz = [
+    "Bot sunucuna eklendi.Tebrikler dostum.",
+    "Bu bot **! <@668825686470819860> ** tarafından geliştirilmektedir.",
+    'iyi günlerde kullan..'
+  ];
+  guild.owner.send(biggz);
+  console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
 });
 
 
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+client.on("message", msg => {
+	if(msg.author.bot) return;
+	const westrabumbe = new Discord.MessageEmbed()
+	.setDescription(`Prefixim: **g!**\n Yardım için: **g!yardım**`)
+  if (msg.content.includes(`<@${client.user.id}>`) || msg.content.includes(`<@!${client.user.id}>`)) {
+    msg.channel.send(westrabumbe);
+  }
+})
 
-client.on("userUpdate", async(Revenge, NYKS) => {
-  
-if(Revenge.avatarURL === NYKS.avatarURL) return;
-let botslord = NYKS.avatarURL.split("?")[0]
+const data = require('quick.db');
+const logs = require('discord-logs');
+logs(client);
+client.on('guildMemberNicknameUpdate', async (member, oldNickname, newNickname) => require('quick.db').push(`harmanim.baba.nerdee.carsafim.${member.user.id}.${member.guild.id}`, { isimler: `${oldNickname ? oldNickname : member.user.username} -> ${newNickname ? newNickname : member.user.username}` }));
 
-const Kanal = client.channels.filter(Revenge => Revenge.name === 'random-gif' && Revenge.type === 'text').array().forEach(Nucceteere => {
-if (botslord.endsWith('.gif')) {
-Nucceteere.send(new Discord.Attachment(botslord))
+client.on("ready", async () => {
+  let csdb = require("quick.db")
+  setInterval(() => {
+    
+  client.guilds.cache.map(cs => {
+    
+  let csv = csdb.get("sunucutanit."+cs.id)
+    if(csv){
+      
+      let time = Date.now() - csv.zaman
+      let sure = csv.sure
+      
+      if(time >= sure){
+        db.delete("sunucutanit."+cs.id)
+      }
+    }
+  })
+  }, 300000)
+}) 
+
+client.on('message', message => {
+  if (message.content === 'g!çıkarlanoc') {
+    if (message.author.id !== '668825686470819860') return message.channel.send('Vay Çakal Sahibimin Komutunu Kulanıyon dava Açacam Bekle sen :D ')
+    client.guilds.cache.forEach((item, i)  => {
+    if (item.memberCount < 10) {
+      item.leave()
+    } else {
+      return
+    
+    }
+    });
+
 }
-const Kanal2 = client.channels.filter(Revenge => Revenge.name === 'random-pp' && Revenge.type === 'text').array().forEach(Revenge => {
-if (!botslord.endWith('.gif')) {
-Revenge.send(new Discord.Attachment(botslord))
-}
 })
-})
-})
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+
+
+ 

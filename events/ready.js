@@ -1,31 +1,30 @@
 const chalk = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
+
 const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
-//【Maiar】Code★Botlist★Uptime AİTDİR!!!
-module.exports = async bot => {
-  //bot.shard.fetchClientValues("guilds.size").then(async results => {
-  //botetchClientValues("users.size").then(async results2 => {
-//  let shardi = bot.shard.id + 1;
+module.exports = client => {
+  console.log(
+    `[${moment().format("YYYY-MM-DD HH:mm:ss")}] BOT: Aktif, Komutlar yüklendi!`
+  );
+  console.log(
+    `[${moment().format("YYYY-MM-DD HH:mm:ss")}] BOT: ${
+      client.user.username
+    } ismi ile giriş yapıldı!`
+  );
+  client.user.setStatus("idle");
   var oyun = [
-    "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
-       "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
-      "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
-       "【Maiar】Code★Botlist★Uptime AİTDİR!!!",
-      "【Maiar】Code★Botlist★Uptime AİTDİR!!!"
-    //`Shard: ${shardi}/${bot.shard.count}`,
-    `${bot.guilds.size.toLocaleString()} Sunucu ve ${bot.guilds
-      .reduce((a, b) => a + b.memberCount, 0)
-      .toLocaleString()} Kullanıcı!`
+        "Gif Sky "     + client.guilds.cache.size +    " sunucuya ve "   + client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString() +   "  kullanıcıya hizmet veriyor!",
+        "g!yardım",
+        "Yardım discord.gg/dev",
+        "Türkiyenin en iyisi olmak için çaba gösteriyoruz!",
+        "Hızla Büyüyoruz"
   ];
 
-  setInterval(async () => {
+  setInterval(function() {
     var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
 
-    bot.user.setActivity(oyun[random], { type: "PLAYING" });
-  }, 12000);
-  bot.user.setStatus("online");
-  //});
-  //});//【Maiar】Code★Botlist★Uptime AİTDİR!!!
-};//【Maiar】Code★Botlist★Uptime AİTDİR!!!//【Maiar】Code★Botlist★Uptime AİTDİR!!!
+    client.user.setActivity(oyun[random], "");
+  }, 2 * 3000);
+};
